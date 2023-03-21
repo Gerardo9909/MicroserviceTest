@@ -6,3 +6,10 @@ spring:
       server:
         git:
           uri: https://github.com/Gerardo9909/MicroserviceTest.git
+          search-paths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+  security:
+    user:
+      name: root
+      password: s3cr3t

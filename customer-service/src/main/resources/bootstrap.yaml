@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8081
+      username: root
+      password: s3cr3t
+      name: customer-service
