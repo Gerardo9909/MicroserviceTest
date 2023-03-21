@@ -68,11 +68,11 @@ public class ProductController {
         return productDeleted == null ? ResponseEntity.notFound().build() : ResponseEntity.status(HttpStatus.OK).body(productDeleted);
     }
 
-    @GetMapping("/{id}/stock")
-    public ResponseEntity<Product> updateStockProduct(@PathVariable("id") Long id, @RequestParam("quantity") Double quantity) {
-        Product productUpdated = productService.updateStock(id, quantity);
-        return productUpdated == null ? ResponseEntity.notFound().build() : ResponseEntity.status(HttpStatus.OK).body(productUpdated);
-    }
+        @GetMapping("/{id}/stock")
+        public ResponseEntity<Product> updateStockProduct(@PathVariable("id") Long id, @RequestParam("quantity") Double quantity) {
+            Product productUpdated = productService.updateStock(id, quantity);
+            return productUpdated == null ? ResponseEntity.notFound().build() : ResponseEntity.status(HttpStatus.OK).body(productUpdated);
+        }
 
     private String formatMessage(BindingResult result) {
         List<Map<String, String>> errorMessages = result.getFieldErrors().stream()
